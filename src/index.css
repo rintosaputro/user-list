@@ -18,6 +18,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  background-color: #242424;
+  min-height: 100vh;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
