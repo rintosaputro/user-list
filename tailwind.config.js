@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         base: "#141414",
-        dark: "#222228",
-        "semi-dark": "#2e2e35",
+        dark: "#232328",
+        "semi-dark": "#2b2b31",
       },
     },
   },
