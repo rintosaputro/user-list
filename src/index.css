@@ -23,6 +23,16 @@ body {
   min-height: 100vh;
 }
 
+.container-tooltip {
+  display: none;
+}
+.container-address:hover .container-tooltip {
+  display: block;
+}
+.arrow-tooltip {
+  transform: rotate(45deg);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

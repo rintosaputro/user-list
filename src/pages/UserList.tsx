@@ -1,3 +1,4 @@
+import AddressSection from "../components/AddressSection";
 import CellBodyTable from "../components/CellBodyTable";
 import CellTitleTable from "../components/CellTitleTable";
 import TableRow from "../components/TableRow";
@@ -21,14 +22,24 @@ const UserList = () => {
             <CellBodyTable>1</CellBodyTable>
             <CellBodyTable>Rinto Saputro</CellBodyTable>
             <CellBodyTable>saputrorinto@gmail.com</CellBodyTable>
-            <CellBodyTable>Rawa Buntu Jl. Cemara Raya</CellBodyTable>
+            <CellBodyTable>
+              <AddressSection
+                shortAddress="Jl. Cemara Raya Blok RF1"
+                fullAddress="Jl. Cemara Raya Blok RF1, RT 01 / RW 06, Rawa Buntu, Serpong, Tangerang Selatan, Banten"
+              />
+            </CellBodyTable>
             <CellBodyTable>081949546667</CellBodyTable>
           </TableRow>
           <TableRow variant="semi-dark">
             <CellBodyTable>1</CellBodyTable>
             <CellBodyTable>Rinto Saputro</CellBodyTable>
             <CellBodyTable>saputrorinto@gmail.com</CellBodyTable>
-            <CellBodyTable>Rawa Buntu Jl. Cemara Raya</CellBodyTable>
+            <CellBodyTable>
+              <AddressSection
+                shortAddress="Jl. Cemara Raya Blok RF1"
+                fullAddress="Jl. Cemara Raya Blok RF1, RT 01 / RW 06, Rawa Buntu, Serpong, Tangerang Selatan, Banten"
+              />
+            </CellBodyTable>
             <CellBodyTable>081949546667</CellBodyTable>
           </TableRow>
         </tbody>
