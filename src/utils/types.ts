@@ -21,3 +21,13 @@ export interface User {
   address: Address;
   company: Company;
 }
+
+export interface PayloadSort {
+  type: "ascending" | "descending";
+  field: "name" | "email" | "phone" | "address";
+}
+
+export interface ActionSort {
+  payload: PayloadSort;
+  type: string;
+}
