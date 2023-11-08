@@ -1,37 +1,36 @@
-import TitleTable from "../components/TitleTable";
+import CellBodyTable from "../components/CellBodyTable";
+import CellTitleTable from "../components/CellTitleTable";
+import TableRow from "../components/TableRow";
 
 const UserList = () => {
   return (
     <section className="max-w-screen-xl m-auto p-[50px]">
-      <h1 className="text-3xl font-bold">Users</h1>
+      <h1 className="text-3xl font-bold mb-7">User List</h1>
       <table className="w-full">
         <thead className="bg-base">
-          <tr>
-            <th>
-              <TitleTable disableSortIcon title="No" />
-            </th>
-            <th>
-              <TitleTable title="Name" />
-            </th>
-            <th>
-              <TitleTable title="Email" />
-            </th>
-            <th>
-              <TitleTable title="Address" />
-            </th>
-            <th>
-              <TitleTable title="Phone" />
-            </th>
-          </tr>
+          <TableRow variant="header">
+            <CellTitleTable disableSortIcon title="No" />
+            <CellTitleTable title="Name" />
+            <CellTitleTable title="Email" />
+            <CellTitleTable title="Address" />
+            <CellTitleTable title="Phone" />
+          </TableRow>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Rinto Saputro</td>
-            <td>saputrorinto@gmail.com</td>
-            <td>Rawa Buntu Jl. Cemara Raya</td>
-            <td>081949546667</td>
-          </tr>
+          <TableRow variant="dark">
+            <CellBodyTable>1</CellBodyTable>
+            <CellBodyTable>Rinto Saputro</CellBodyTable>
+            <CellBodyTable>saputrorinto@gmail.com</CellBodyTable>
+            <CellBodyTable>Rawa Buntu Jl. Cemara Raya</CellBodyTable>
+            <CellBodyTable>081949546667</CellBodyTable>
+          </TableRow>
+          <TableRow variant="semi-dark">
+            <CellBodyTable>1</CellBodyTable>
+            <CellBodyTable>Rinto Saputro</CellBodyTable>
+            <CellBodyTable>saputrorinto@gmail.com</CellBodyTable>
+            <CellBodyTable>Rawa Buntu Jl. Cemara Raya</CellBodyTable>
+            <CellBodyTable>081949546667</CellBodyTable>
+          </TableRow>
         </tbody>
       </table>
     </section>
