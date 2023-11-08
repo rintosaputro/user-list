@@ -1,9 +1,20 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import AddressSection from "../components/AddressSection";
 import CellBodyTable from "../components/CellBodyTable";
 import CellTitleTable from "../components/CellTitleTable";
 import TableRow from "../components/TableRow";
+import { fetchPosts } from "../store/usersSlice";
+import { AppDispatch, RootState } from "../store";
 
 const UserList = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const users = useSelector((state: RootState) => state.users);
+
+  useEffect(() => {
+    dispatch(fetchPosts());
+  }, [dispatch]);
+  console.log("response", users);
   return (
     <section className="max-w-screen-xl m-auto p-[50px]">
       <h1 className="text-3xl font-bold mb-7">User List</h1>
