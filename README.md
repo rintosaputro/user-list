@@ -1,5 +1,7 @@
 # User List App
 
+User List is an application that displays a table of user data obtained from an API. It features ascending and descending sorting options for each field. Additionally, it includes two extra features: a search functionality based on user names and a tooltip for addresses. When hovering over the address field, it shows detailed information about that address.
+
 ## How to run
 
 - Clone this repository
