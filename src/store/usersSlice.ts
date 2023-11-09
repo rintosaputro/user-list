@@ -3,16 +3,20 @@ import { ActionSort, User } from "../utils/types";
 
 interface UserState {
   data: User[];
+  searchData: User[];
   loading: boolean;
   error: string | null;
   typeSort: "ascending" | "descending" | null;
+  isKeyword: boolean;
 }
 
 const initialState: UserState = {
   data: [],
+  searchData: [],
   loading: false,
   error: null,
   typeSort: null,
+  isKeyword: false,
 };
 
 export const fetchPosts = createAsyncThunk("users/fetchUsers", async () => {
@@ -49,6 +53,17 @@ const usersSlice = createSlice({
         return 0;
       });
     },
+    searchUser: (state, action) => {
+      if (action.payload) {
+        state.isKeyword = true;
+        state.searchData = state.data.filter((user) =>
+          user.name.toLocaleLowerCase().includes(action.payload)
+        );
+      } else {
+        state.isKeyword = false;
+        state.searchData = [];
+      }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -66,5 +81,5 @@ const usersSlice = createSlice({
   },
 });
 
-export const { sortUsers } = usersSlice.actions;
+export const { sortUsers, searchUser } = usersSlice.actions;
 export default usersSlice.reducer;
