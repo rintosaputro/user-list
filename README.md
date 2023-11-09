@@ -30,3 +30,11 @@ npm run dev
 
 - If the browser does not open automatically then open the browser and go to http://localhost:5173
 - Done
+
+## Vulnerability Scan Results
+
+1. Package
+   ![](scan/scanning-package.png)
+
+2. Code analysis
+   ![](scan/scanning-code.png)
