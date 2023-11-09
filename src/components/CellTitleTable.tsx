@@ -30,9 +30,11 @@ const CellTitleTable: FC<CellTitleTableProps> = ({
               onClick={() => handleSort("ascending")}
               title="ascending"
               type="button"
-              className={`leading-none text-[9.5px] text-[${
-                typeSort === "ascending" || !typeSort ? "#fff" : "#8c8c8c"
-              }]`}
+              className={`leading-none text-[9.5px] ${
+                typeSort === "ascending" || !typeSort
+                  ? "text-white"
+                  : "text-gray-500"
+              }`}
             >
               ▲
             </button>
@@ -40,9 +42,11 @@ const CellTitleTable: FC<CellTitleTableProps> = ({
               onClick={() => handleSort("descending")}
               title="descending"
               type="button"
-              className={`leading-none text-[9.5px] text-[${
-                typeSort === "descending" || !typeSort ? "#fff" : "#8c8c8c"
-              }]`}
+              className={`leading-none text-[9.5px] ${
+                typeSort === "descending" || !typeSort
+                  ? "text-white"
+                  : "text-gray-500"
+              }`}
             >
               ▼
             </button>
