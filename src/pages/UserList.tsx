@@ -14,7 +14,7 @@ const UserList = () => {
 
   return (
     <section className="max-w-screen-xl m-auto p-[50px]">
-      <h1 className="text-3xl font-bold mb-7">User List</h1>
+      <h1 className="text-3xl font-bold mb-7">*User List</h1>
       <div className="my-4">
         <SearchBar />
       </div>
