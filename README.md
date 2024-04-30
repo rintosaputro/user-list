@@ -29,7 +29,6 @@ npm run dev
 ```
 
 - If the browser does not open automatically then open the browser and go to http://localhost:5173
-- Done
 
 ## Vulnerability Scan Results
 
